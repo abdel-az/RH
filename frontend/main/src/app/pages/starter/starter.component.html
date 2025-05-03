@@ -1,0 +1,49 @@
+<!--<div class="row">
+  <div class="col-lg-8">
+    <app-sales-profit></app-sales-profit>
+  </div>
+  <div class="col-lg-4">
+    <div class="row">
+      <div class="col-12">
+        <app-total-followers></app-total-followers>
+      </div>
+      <div class="col-12">
+        <app-total-income></app-total-income>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8">
+    <app-popular-products></app-popular-products>
+  </div>
+  <div class="col-lg-4">
+    <app-earning-reports></app-earning-reports>
+  </div>
+  <div class="col-12">
+    <app-blog-card></app-blog-card>
+  </div>
+</div>-->
+
+<mat-toolbar color="primary">
+  <span>Job Portal Home</span>
+</mat-toolbar>
+
+<div class="container">
+  <mat-card class="stat-card total-jobs">
+    <mat-card-title>Total Jobs</mat-card-title>
+    <mat-card-content>
+      <h2>{{ totalJobs }}</h2>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="stat-card total-internships">
+    <mat-card-title>Total Internships</mat-card-title>
+    <mat-card-content>
+      <h2>{{ totalInternships }}</h2>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="stat-card total-trainings">
+    <mat-card-title>Total Trainings</mat-card-title>
+    <mat-card-content>
+      <h2>{{ totalTrainings }}</h2>
+    </mat-card-content>
+  </mat-card>
+</div>

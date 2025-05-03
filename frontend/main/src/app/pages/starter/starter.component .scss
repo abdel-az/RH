@@ -1,0 +1,58 @@
+.container {
+  margin: 20px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.stat-card {
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.total-jobs {
+  background-color: #e3f2fd; /* Light Blue */
+}
+
+.total-internships {
+  background-color: #fce4ec; /* Light Pink */
+}
+
+.total-trainings {
+  background-color: #e8f5e9; /* Light Green */
+}
+
+.stat-card:hover.total-jobs {
+  background-color: #bbdefb; /* Darker Blue */
+}
+
+.stat-card:hover.total-internships {
+  background-color: #f8bbd0; /* Darker Pink */
+}
+
+.stat-card:hover.total-trainings {
+  background-color: #c8e6c9; /* Darker Green */
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-card {
+    width: 100%;
+  }
+}
