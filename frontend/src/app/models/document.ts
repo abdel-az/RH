@@ -1,0 +1,15 @@
+export interface Document {
+  owner: string,
+  filename: string,
+  filetype: string,
+  title: string,
+  content: string,
+  checksum: string,
+  state: string,
+  storage_box: string,
+  is_scanned: boolean,
+  regle_classment : string,
+  created_at: Date,
+  updated_at: Date,
+  deleted_at: Date,
+}

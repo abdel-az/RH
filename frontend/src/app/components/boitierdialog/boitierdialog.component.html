@@ -1,0 +1,25 @@
+<h1 mat-dialog-title> Boitier </h1>
+<div mat-dialog-content>
+    <form [formGroup]="Form">
+
+        <mat-form-field appearance="outline">
+            <mat-label> Nom</mat-label>
+            <input formControlName="code" matInput placeholder="code">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Raionages</mat-label>
+            <mat-select formControlName="raionage"  >
+              <mat-option  *ngFor="let s of raionages| async" [value]="s.url">
+                {{s.code}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px ;" mat-raised-button color="primary" (click)="addBoitier()" >{{optionBtn}}</button>
+
+</div>
+    </form>
+
+</div>

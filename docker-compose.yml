@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:12.6
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    env_file:
+      - ./backend/.env
+
+  app:
+    build: ./backend
+    env_file:
+      - ./backend/.env
+    command: gunicorn gedar.wsgi:application --bind 0.0.0.0:8000 --reload
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  ng:
+    build: ./frontend
+    command: npm start
+    volumes:
+      - ./frontend:/code
+      - ./frontend/node_modules:/code/node_modules
+    ports:
+      - 4200:4200
+    depends_on:
+      - app
+
+volumes:
+  db_data:
